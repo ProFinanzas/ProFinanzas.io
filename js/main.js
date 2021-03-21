@@ -13,6 +13,19 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
+
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $('.whatsapp').fadeIn('slow');
+        } else {
+            $('.whatsapp').fadeOut('slow');
+        }
+    });
+    $('.whatsapp').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return false;
+    });
     
     
     // Sticky Navbar
@@ -45,48 +58,48 @@
     });
 
 
-    // Testimonials carousel
-    $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
+    // // Testimonials carousel
+    // $(".testimonials-carousel").owlCarousel({
+    //     autoplay: true,
+    //     dots: true,
+    //     loop: true,
+    //     responsive: {
+    //         0:{
+    //             items:1
+    //         },
+    //         576:{
+    //             items:1
+    //         },
+    //         768:{
+    //             items:2
+    //         },
+    //         992:{
+    //             items:3
+    //         }
+    //     }
+    // });
     
     
-    // Blogs carousel
-    $(".blog-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            992:{
-                items:3
-            }
-        }
-    });
+    // // Blogs carousel
+    // $(".blog-carousel").owlCarousel({
+    //     autoplay: true,
+    //     dots: true,
+    //     loop: true,
+    //     responsive: {
+    //         0:{
+    //             items:1
+    //         },
+    //         576:{
+    //             items:1
+    //         },
+    //         768:{
+    //             items:2
+    //         },
+    //         992:{
+    //             items:3
+    //         }
+    //     }
+    // });
     
     
     // Portfolio isotope and filter
@@ -103,4 +116,5 @@
     });
     
 })(jQuery);
+
 
